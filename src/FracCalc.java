@@ -1,3 +1,5 @@
+import java.util.Scanner;
+
 public class FracCalc {
 
     /**
@@ -6,11 +8,26 @@ public class FracCalc {
      */
     public static void main(String[] args) 
     {
+    	System.out.println("output: " + produceAnswer());
         // TODO: Read the input from the user and call produceAnswer with an equation
         // Checkpoint 1: Create a Scanner, read one line of input, pass that input to produceAnswer, print the result.
         // Checkpoint 2: Accept user input multiple times.
     }
-    
+    public static String produceAnswer () {
+    	Scanner scanner = new Scanner(System.in);
+    	String first = "", second = "", third = "";
+    	if (scanner.hasNext()) {
+    		first = scanner.next();
+    		if (scanner.hasNext()) {
+    			second = scanner.next();
+    			if (scanner.hasNext()) {
+    				third = scanner.next();
+    				return third;
+    			}
+    		}
+    	}
+    	return "";
+    }
     /**
      * produceAnswer - This function takes a String 'input' and produces the result.
      * @param input - A fraction string that needs to be evaluated.  For your program, this will be the user input.
