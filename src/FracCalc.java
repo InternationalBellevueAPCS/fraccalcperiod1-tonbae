@@ -13,6 +13,7 @@ public class FracCalc {
         // Checkpoint 1: Create a Scanner, read one line of input, pass that input to produceAnswer, print the result.
         // Checkpoint 2: Accept user input multiple times.
     }
+    
     public static String produceAnswer () {
     	Scanner scanner = new Scanner(System.in);
     	String first = "", second = "", third = "";
