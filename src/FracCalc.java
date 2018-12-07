@@ -23,7 +23,19 @@ public class FracCalc {
     			second = scanner.next();
     			if (scanner.hasNext()) {
     				third = scanner.next();
-    				return third;
+    				
+    				String whole = "", numerator = "", denominator = "";
+    				int indexUnderscore = third.indexOf('_');
+    				int indexDivide = third.indexOf('/');
+    				
+    				//stuff before underscore is determined as the whole number
+    				if (indexUnderscore > 0) {
+    					whole = third.substring(0, indexUnderscore);
+    				//if the whole number doesnt exist then still finds numerator and denominator 
+    					numerator = third.substring(indexUnderscore + 1, indexDivide);
+    					denominator = third.substring(indexDivide + 1);
+    				}
+    				return "whole: " + whole + " numerator: " + numerator + " denominator: " + denominator;
     			}
     		}
     	}
